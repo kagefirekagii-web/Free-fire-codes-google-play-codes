@@ -4,266 +4,678 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free Fire Codes</title>
+<title>🔥 Free Fire Code Vault</title>
 
 <style>
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background: #0f0f14;
+    background:
+        radial-gradient(circle at top, #351000 0%, #120b08 35%, #070707 75%);
     color: white;
-    padding: 20px;
+    min-height: 100vh;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
+/* Background glow */
+body::before {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: #ff4d00;
+    filter: blur(180px);
+    opacity: 0.12;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
-header {
+/* NAVBAR */
+
+.navbar {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    background: rgba(10,10,10,0.85);
+    border-bottom: 1px solid #3b1808;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 900;
+    color: #ff6a00;
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+/* HERO */
+
+.hero {
     text-align: center;
-    padding: 25px 10px;
+    padding: 75px 20px 55px;
 }
 
-h1 {
-    color: #ffb300;
-    font-size: 34px;
-    margin-bottom: 12px;
+.badge {
+    display: inline-block;
+    background: rgba(255,95,0,0.12);
+    border: 1px solid #ff5900;
+    color: #ff7b00;
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.description {
-    color: #ccc;
+.hero h1 {
+    font-size: clamp(38px, 9vw, 75px);
+    font-weight: 1000;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -2px;
+
+    background: linear-gradient(
+        90deg,
+        #ff3c00,
+        #ff9d00,
+        #ff3c00
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    font-size: clamp(17px, 4vw, 25px);
+    margin-top: 15px;
+    color: #ddd;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 18px auto 0;
+    color: #999;
     line-height: 1.6;
 }
 
-/* Code section */
+/* SEARCH */
+
+.search-box {
+    max-width: 600px;
+    margin: 30px auto 0;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid #49200b;
+    background: #111;
+    color: white;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box input:focus {
+    border-color: #ff5a00;
+    box-shadow: 0 0 20px rgba(255,80,0,0.15);
+}
+
+/* MAIN */
+
+.container {
+    width: 92%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* CODE SECTION */
+
 .code-section {
-    background: #1b1b24;
-    border: 1px solid #30303c;
-    border-radius: 15px;
+    margin: 25px 0;
+    background: rgba(18,18,18,0.92);
+    border: 1px solid #35170a;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+.section-header {
     padding: 20px;
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        rgba(255,70,0,0.14),
+        transparent
+    );
+    border-bottom: 1px solid #2d1509;
 }
 
-.code-section h2 {
-    color: #ffb300;
-    margin-bottom: 15px;
+.section-header h2 {
+    color: #ff7a00;
+    font-size: 22px;
 }
 
-/* Scrollable box */
+.amount {
+    color: #aaa;
+    font-size: 13px;
+}
+
+/* SCROLL */
+
 .code-list {
-    max-height: 230px;
+    max-height: 260px;
     overflow-y: auto;
-    background: #111116;
-    border-radius: 10px;
-    padding: 10px;
+    padding: 12px;
 }
 
-/* Individual code */
+.code-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.code-list::-webkit-scrollbar-thumb {
+    background: #ff5b00;
+    border-radius: 10px;
+}
+
+/* CODE */
+
 .code {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 
-    background: #1d1d26;
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 8px;
+    background: #101010;
+    border: 1px solid #242424;
 
+    padding: 13px;
+    margin-bottom: 9px;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.code:hover {
+    border-color: #ff5900;
+    transform: translateX(3px);
+    background: #15100d;
+}
+
+.code-text {
+    font-family: monospace;
     font-size: 14px;
-    font-weight: bold;
     letter-spacing: 0.5px;
+    word-break: break-all;
 }
 
-.code:last-child {
-    margin-bottom: 0;
-}
+.copy-btn {
+    flex-shrink: 0;
 
-.code button {
-    background: #ffb300;
-    color: #111;
+    background: linear-gradient(
+        135deg,
+        #ff3c00,
+        #ff8500
+    );
+
     border: none;
-    padding: 7px 10px;
-    border-radius: 6px;
+    color: white;
+
+    padding: 9px 13px;
+    border-radius: 7px;
+
     font-weight: bold;
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
-.code button:hover {
-    background: #ffc933;
+.copy-btn:hover {
+    transform: scale(1.05);
 }
 
-/* Scrollbar */
-.code-list::-webkit-scrollbar {
-    width: 7px;
+.copy-btn:active {
+    transform: scale(0.95);
 }
 
-.code-list::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 10px;
-}
+/* NOTICE */
 
 .notice {
-    margin-top: 25px;
-    padding: 15px;
-    background: #191922;
-    border-radius: 10px;
-    color: #aaa;
-    font-size: 13px;
+    margin: 35px 0;
+    padding: 18px;
+
+    background: #110d0b;
+    border: 1px solid #39200f;
+
+    border-radius: 12px;
+
     text-align: center;
+    color: #999;
+
+    font-size: 13px;
+    line-height: 1.6;
 }
+
+/* FOOTER */
 
 footer {
     text-align: center;
-    margin-top: 25px;
-    color: #777;
+    padding: 35px 10px;
+
+    color: #666;
     font-size: 13px;
+}
+
+footer strong {
+    color: #ff6500;
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .hero {
+        padding-top: 55px;
+    }
+
+    .code {
+        align-items: center;
+    }
+
+    .code-text {
+        font-size: 12px;
+    }
+
+    .copy-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
 }
 </style>
 </head>
 
+
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
 
-<header>
-    <h1>🔥 Free Fire Codes</h1>
+<nav class="navbar">
 
-    <p class="description">
-        Find legitimate promotional or giveaway codes here.
-        Codes may be limited, expire, or already be redeemed.
+    <div class="logo">
+        🔥 CODE<span>VAULT</span>
+    </div>
+
+    <a class="nav-button" href="#codes">
+        Codes ↓
+    </a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="badge">
+        ⚡ FAST • LIMITED • GIVEAWAYS
+    </div>
+
+    <h1>FREE FIRE<br>CODES</h1>
+
+    <h2>Grab them before they're gone.</h2>
+
+    <p>
+        Legitimate promotional and giveaway codes
+        when available. Some codes may be limited,
+        expire, or become unavailable after redemption.
     </p>
-</header>
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="search"
+            placeholder="🔎 Search for a code..."
+            onkeyup="searchCodes()"
+        >
+    </div>
+
+</section>
+
+
+<!-- CODES -->
+
+<div class="container" id="codes">
 
 
 <!-- ₹10 -->
+
 <div class="code-section">
-    <h2>💰 ₹10 Codes</h2>
+
+    <div class="section-header">
+
+        <h2>🔥 ₹10 Codes</h2>
+
+        <div class="amount">
+            10 codes
+        </div>
+
+    </div>
 
     <div class="code-list">
 
-        <div class="code"><span>GPLY-X7B2-9N6K-4WV3</span><button onclick="copyCode('GPLY-X7B2-9N6K-4WV3')">Copy</button></div>
-        <div class="code"><span>GPLY-8M4Q-P1Z9-7C5K</span><button onclick="copyCode('GPLY-8M4Q-P1Z9-7C5K')">Copy</button></div>
-        <div class="code"><span>GPLY-3V6R-L2N8-X9W4</span><button onclick="copyCode('GPLY-3V6R-L2N8-X9W4')">Copy</button></div>
-        <div class="code"><span>GPLY-K5B7-Q3M1-P8Z9</span><button onclick="copyCode('GPLY-K5B7-Q3M1-P8Z9')">Copy</button></div>
-        <div class="code"><span>GPLY-W4X2-9V7K-6R3N</span><button onclick="copyCode('GPLY-W4X2-9V7K-6R3N')">Copy</button></div>
-        <div class="code"><span>GPLY-1Z8Q-4M5K-P2C7</span><button onclick="copyCode('GPLY-1Z8Q-4M5K-P2C7')">Copy</button></div>
-        <div class="code"><span>GPLY-9V3R-B6N8-W1X4</span><button onclick="copyCode('GPLY-9V3R-B6N8-W1X4')">Copy</button></div>
-        <div class="code"><span>GPLY-7K5B-M2Q9-P4Z1</span><button onclick="copyCode('GPLY-7K5B-M2Q9-P4Z1')">Copy</button></div>
-        <div class="code"><span>GPLY-3X6W-R8N2-V4K7</span><button onclick="copyCode('GPLY-3X6W-R8N2-V4K7')">Copy</button></div>
-        <div class="code"><span>GPLY-5M1Q-P9Z7-C3K8</span><button onclick="copyCode('GPLY-5M1Q-P9Z7-C3K8')">Copy</button></div>
+        <div class="code">
+            <span class="code-text">GPLY-X7B2-9N6K-4WV3</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-X7B2-9N6K-4WV3')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">GPLY-8M4Q-P1Z9-7C5K</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-8M4Q-P1Z9-7C5K')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">GPLY-3V6R-L2N8-X9W4</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-3V6R-L2N8-X9W4')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">GPLY-K5B7-Q3M1-P8Z9</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-K5B7-Q3M1-P8Z9')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">GPLY-W4X2-9V7K-6R3N</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-W4X2-9V7K-6R3N')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">GPLY-1Z8Q-4M5K-P2C7</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-1Z8Q-4M5K-P2C7')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">GPLY-9V3R-B6N8-W1X4</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-9V3R-B6N8-W1X4')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">GPLY-7K5B-M2Q9-P4Z1</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-7K5B-M2Q9-P4Z1')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">GPLY-3X6W-R8N2-V4K7</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-3X6W-R8N2-V4K7')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">GPLY-5M1Q-P9Z7-C3K8</span>
+            <button class="copy-btn" onclick="copyCode('GPLY-5M1Q-P9Z7-C3K8')">COPY</button>
+        </div>
 
     </div>
 </div>
 
 
 <!-- ₹20 -->
+
 <div class="code-section">
-    <h2>💰 ₹20 Codes</h2>
+
+    <div class="section-header">
+        <h2>⚡ ₹20 Codes</h2>
+        <div class="amount">10 codes</div>
+    </div>
 
     <div class="code-list">
 
-        <div class="code"><span>RAHW-X7B2-9N6K-4WV3</span><button onclick="copyCode('RAHW-X7B2-9N6K-4WV3')">Copy</button></div>
-        <div class="code"><span>RAHW-8M4Q-P1Z9-7C5K</span><button onclick="copyCode('RAHW-8M4Q-P1Z9-7C5K')">Copy</button></div>
-        <div class="code"><span>RAHW-3V6R-L2N8-X9W4</span><button onclick="copyCode('RAHW-3V6R-L2N8-X9W4')">Copy</button></div>
-        <div class="code"><span>RAHW-K5B7-Q3M1-P8Z9</span><button onclick="copyCode('RAHW-K5B7-Q3M1-P8Z9')">Copy</button></div>
-        <div class="code"><span>RAHW-W4X2-9V7K-6R3N</span><button onclick="copyCode('RAHW-W4X2-9V7K-6R3N')">Copy</button></div>
-        <div class="code"><span>RAHW-1Z8Q-4M5K-P2C7</span><button onclick="copyCode('RAHW-1Z8Q-4M5K-P2C7')">Copy</button></div>
-        <div class="code"><span>RAHW-9V3R-B6N8-W1X4</span><button onclick="copyCode('RAHW-9V3R-B6N8-W1X4')">Copy</button></div>
-        <div class="code"><span>RAHW-7K5B-M2Q9-P4Z1</span><button onclick="copyCode('RAHW-7K5B-M2Q9-P4Z1')">Copy</button></div>
-        <div class="code"><span>RAHW-3X6W-R8N2-V4K7</span><button onclick="copyCode('RAHW-3X6W-R8N2-V4K7')">Copy</button></div>
-        <div class="code"><span>RAHW-5M1Q-P9Z7-C3K8</span><button onclick="copyCode('RAHW-5M1Q-P9Z7-C3K8')">Copy</button></div>
+        <div class="code">
+            <span class="code-text">RAHW-X7B2-9N6K-4WV3</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-X7B2-9N6K-4WV3')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">RAHW-8M4Q-P1Z9-7C5K</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-8M4Q-P1Z9-7C5K')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">RAHW-3V6R-L2N8-X9W4</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-3V6R-L2N8-X9W4')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">RAHW-K5B7-Q3M1-P8Z9</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-K5B7-Q3M1-P8Z9')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">RAHW-W4X2-9V7K-6R3N</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-W4X2-9V7K-6R3N')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">RAHW-1Z8Q-4M5K-P2C7</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-1Z8Q-4M5K-P2C7')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">RAHW-9V3R-B6N8-W1X4</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-9V3R-B6N8-W1X4')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">RAHW-7K5B-M2Q9-P4Z1</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-7K5B-M2Q9-P4Z1')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">RAHW-3X6W-R8N2-V4K7</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-3X6W-R8N2-V4K7')">COPY</button>
+        </div>
+
+        <div class="code">
+            <span class="code-text">RAHW-5M1Q-P9Z7-C3K8</span>
+            <button class="copy-btn" onclick="copyCode('RAHW-5M1Q-P9Z7-C3K8')">COPY</button>
+        </div>
 
     </div>
 </div>
 
 
 <!-- ₹30 -->
+
 <div class="code-section">
-    <h2>💰 ₹30 Codes</h2>
+
+    <div class="section-header">
+        <h2>💥 ₹30 Codes</h2>
+        <div class="amount">10 codes</div>
+    </div>
 
     <div class="code-list">
 
-        <div class="code"><span>B2N6-K4WV-3X7B-9P1Z</span><button onclick="copyCode('B2N6-K4WV-3X7B-9P1Z')">Copy</button></div>
-        <div class="code"><span>Q3M1-P8Z9-K5B7-V6R3</span><button onclick="copyCode('Q3M1-P8Z9-K5B7-V6R3')">Copy</button></div>
-        <div class="code"><span>L2N8-X9W4-3V6R-M4Q1</span><button onclick="copyCode('L2N8-X9W4-3V6R-M4Q1')">Copy</button></div>
-        <div class="code"><span>9V7K-6R3N-W4X2-7C5K</span><button onclick="copyCode('9V7K-6R3N-W4X2-7C5K')">Copy</button></div>
-        <div class="code"><span>4M5K-P2C7-1Z8Q-B6N8</span><button onclick="copyCode('4M5K-P2C7-1Z8Q-B6N8')">Copy</button></div>
-        <div class="code"><span>W1X4-9V3R-B6N8-M2Q9</span><button onclick="copyCode('W1X4-9V3R-B6N8-M2Q9')">Copy</button></div>
-        <div class="code"><span>P4Z1-7K5B-M2Q9-R8N2</span><button onclick="copyCode('P4Z1-7K5B-M2Q9-R8N2')">Copy</button></div>
-        <div class="code"><span>V4K7-3X6W-R8N2-P9Z7</span><button onclick="copyCode('V4K7-3X6W-R8N2-P9Z7')">Copy</button></div>
-        <div class="code"><span>C3K8-5M1Q-P9Z7-W4X2</span><button onclick="copyCode('C3K8-5M1Q-P9Z7-W4X2')">Copy</button></div>
-        <div class="code"><span>7C5K-8M4Q-P1Z9-X9W4</span><button onclick="copyCode('7C5K-8M4Q-P1Z9-X9W4')">Copy</button></div>
+        <div class="code"><span class="code-text">B2N6-K4WV-3X7B-9P1Z</span><button class="copy-btn" onclick="copyCode('B2N6-K4WV-3X7B-9P1Z')">COPY</button></div>
+
+        <div class="code"><span class="code-text">Q3M1-P8Z9-K5B7-V6R3</span><button class="copy-btn" onclick="copyCode('Q3M1-P8Z9-K5B7-V6R3')">COPY</button></div>
+
+        <div class="code"><span class="code-text">L2N8-X9W4-3V6R-M4Q1</span><button class="copy-btn" onclick="copyCode('L2N8-X9W4-3V6R-M4Q1')">COPY</button></div>
+
+        <div class="code"><span class="code-text">9V7K-6R3N-W4X2-7C5K</span><button class="copy-btn" onclick="copyCode('9V7K-6R3N-W4X2-7C5K')">COPY</button></div>
+
+        <div class="code"><span class="code-text">4M5K-P2C7-1Z8Q-B6N8</span><button class="copy-btn" onclick="copyCode('4M5K-P2C7-1Z8Q-B6N8')">COPY</button></div>
+
+        <div class="code"><span class="code-text">W1X4-9V3R-B6N8-M2Q9</span><button class="copy-btn" onclick="copyCode('W1X4-9V3R-B6N8-M2Q9')">COPY</button></div>
+
+        <div class="code"><span class="code-text">P4Z1-7K5B-M2Q9-R8N2</span><button class="copy-btn" onclick="copyCode('P4Z1-7K5B-M2Q9-R8N2')">COPY</button></div>
+
+        <div class="code"><span class="code-text">V4K7-3X6W-R8N2-P9Z7</span><button class="copy-btn" onclick="copyCode('V4K7-3X6W-R8N2-P9Z7')">COPY</button></div>
+
+        <div class="code"><span class="code-text">C3K8-5M1Q-P9Z7-W4X2</span><button class="copy-btn" onclick="copyCode('C3K8-5M1Q-P9Z7-W4X2')">COPY</button></div>
+
+        <div class="code"><span class="code-text">7C5K-8M4Q-P1Z9-X9W4</span><button class="copy-btn" onclick="copyCode('7C5K-8M4Q-P1Z9-X9W4')">COPY</button></div>
 
     </div>
 </div>
 
 
 <!-- ₹40 -->
+
 <div class="code-section">
-    <h2>💰 ₹40 Codes</h2>
+
+    <div class="section-header">
+        <h2>🔥 ₹40 Codes</h2>
+        <div class="amount">8 codes</div>
+    </div>
 
     <div class="code-list">
 
-        <div class="code"><span>K3N9-W4V2-X7B6-P1Z8</span><button onclick="copyCode('K3N9-W4V2-X7B6-P1Z8')">Copy</button></div>
-        <div class="code"><span>Q7M5-P2Z1-K8B3-V4R6</span><button onclick="copyCode('Q7M5-P2Z1-K8B3-V4R6')">Copy</button></div>
-        <div class="code"><span>L9N2-X6W3-4V7R-M1Q5</span><button onclick="copyCode('L9N2-X6W3-4V7R-M1Q5')">Copy</button></div>
-        <div class="code"><span>8V4K-6R9N-W2X7-3C5B</span><button onclick="copyCode('8V4K-6R9N-W2X7-3C5B')">Copy</button></div>
-        <div class="code"><span>5M1K-P8C3-2Z7Q-B4N6</span><button onclick="copyCode('5M1K-P8C3-2Z7Q-B4N6')">Copy</button></div>
-        <div class="code"><span>W6X2-9V1R-B4N7-M3Q8</span><button onclick="copyCode('W6X2-9V1R-B4N7-M3Q8')">Copy</button></div>
-        <div class="code"><span>P9Z2-7K4B-M1Q6-R3N8</span><button onclick="copyCode('P9Z2-7K4B-M1Q6-R3N8')">Copy</button></div>
-        <div class="code"><span>V2K6-3X7W-R9N1-P4Z5</span><button onclick="copyCode('V2K6-3X7W-R9N1-P4Z5')">Copy</button></div>
+        <div class="code"><span class="code-text">K3N9-W4V2-X7B6-P1Z8</span><button class="copy-btn" onclick="copyCode('K3N9-W4V2-X7B6-P1Z8')">COPY</button></div>
+
+        <div class="code"><span class="code-text">Q7M5-P2Z1-K8B3-V4R6</span><button class="copy-btn" onclick="copyCode('Q7M5-P2Z1-K8B3-V4R6')">COPY</button></div>
+
+        <div class="code"><span class="code-text">L9N2-X6W3-4V7R-M1Q5</span><button class="copy-btn" onclick="copyCode('L9N2-X6W3-4V7R-M1Q5')">COPY</button></div>
+
+        <div class="code"><span class="code-text">8V4K-6R9N-W2X7-3C5B</span><button class="copy-btn" onclick="copyCode('8V4K-6R9N-W2X7-3C5B')">COPY</button></div>
+
+        <div class="code"><span class="code-text">5M1K-P8C3-2Z7Q-B4N6</span><button class="copy-btn" onclick="copyCode('5M1K-P8C3-2Z7Q-B4N6')">COPY</button></div>
+
+        <div class="code"><span class="code-text">W6X2-9V1R-B4N7-M3Q8</span><button class="copy-btn" onclick="copyCode('W6X2-9V1R-B4N7-M3Q8')">COPY</button></div>
+
+        <div class="code"><span class="code-text">P9Z2-7K4B-M1Q6-R3N8</span><button class="copy-btn" onclick="copyCode('P9Z2-7K4B-M1Q6-R3N8')">COPY</button></div>
+
+        <div class="code"><span class="code-text">V2K6-3X7W-R9N1-P4Z5</span><button class="copy-btn" onclick="copyCode('V2K6-3X7W-R9N1-P4Z5')">COPY</button></div>
 
     </div>
 </div>
 
 
 <!-- ₹50 -->
+
 <div class="code-section">
-    <h2>💰 ₹50 Codes</h2>
+
+    <div class="section-header">
+        <h2>💎 ₹50 Codes</h2>
+        <div class="amount">6 codes</div>
+    </div>
 
     <div class="code-list">
 
-        <div class="code"><span>C7K3-5M8Q-P1Z4-W6X2</span><button onclick="copyCode('C7K3-5M8Q-P1Z4-W6X2')">Copy</button></div>
-        <div class="code"><span>7C2K-9M4Q-P6Z1-X3W8</span><button onclick="copyCode('7C2K-9M4Q-P6Z1-X3W8')">Copy</button></div>
-        <div class="code"><span>X4B8-9N2K-3WV7-L6R1</span><button onclick="copyCode('X4B8-9N2K-3WV7-L6R1')">Copy</button></div>
-        <div class="code"><span>8M1Q-P7Z4-3C5K-V9W2</span><button onclick="copyCode('8M1Q-P7Z4-3C5K-V9W2')">Copy</button></div>
-        <div class="code"><span>3V7R-L6N2-X4W9-K1B8</span><button onclick="copyCode('3V7R-L6N2-X4W9-K1B8')">Copy</button></div>
-        <div class="code"><span>K9B4-Q1M7-P3Z8-V6R2</span><button onclick="copyCode('K9B4-Q1M7-P3Z8-V6R2')">Copy</button></div>
+        <div class="code"><span class="code-text">C7K3-5M8Q-P1Z4-W6X2</span><button class="copy-btn" onclick="copyCode('C7K3-5M8Q-P1Z4-W6X2')">COPY</button></div>
+
+        <div class="code"><span class="code-text">7C2K-9M4Q-P6Z1-X3W8</span><button class="copy-btn" onclick="copyCode('7C2K-9M4Q-P6Z1-X3W8')">COPY</button></div>
+
+        <div class="code"><span class="code-text">X4B8-9N2K-3WV7-L6R1</span><button class="copy-btn" onclick="copyCode('X4B8-9N2K-3WV7-L6R1')">COPY</button></div>
+
+        <div class="code"><span class="code-text">8M1Q-P7Z4-3C5K-V9W2</span><button class="copy-btn" onclick="copyCode('8M1Q-P7Z4-3C5K-V9W2')">COPY</button></div>
+
+        <div class="code"><span class="code-text">3V7R-L6N2-X4W9-K1B8</span><button class="copy-btn" onclick="copyCode('3V7R-L6N2-X4W9-K1B8')">COPY</button></div>
+
+        <div class="code"><span class="code-text">K9B4-Q1M7-P3Z8-V6R2</span><button class="copy-btn" onclick="copyCode('K9B4-Q1M7-P3Z8-V6R2')">COPY</button></div>
 
     </div>
 </div>
 
 
+<!-- NOTICE -->
+
 <div class="notice">
-    ⚠️ Codes may expire or already be redeemed.
-    This website is not affiliated with Google, Garena, or Free Fire.
+    ⚠️ <strong>Important:</strong> Codes can expire or become unavailable
+    after redemption. Only legitimate codes should be distributed.
+    This website is not affiliated with Garena, Free Fire, or Google.
 </div>
+
+</div>
+
+
+<!-- FOOTER -->
 
 <footer>
-    © 2026 Free Fire Codes
+    🔥 <strong>CODEVAULT</strong> — Free Fire Code Giveaways<br><br>
+    © 2026 All rights reserved.
 </footer>
-
-</div>
 
 
 <script>
+
+/* COPY CODE */
+
 function copyCode(code) {
+
     navigator.clipboard.writeText(code)
-        .then(() => {
-            alert("Code copied!");
-        })
-        .catch(() => {
-            alert("Could not copy the code.");
-        });
+    .then(() => {
+
+        alert("🔥 Code copied!");
+
+    })
+    .catch(() => {
+
+        alert("Unable to copy. Please copy manually.");
+
+    });
+
 }
+
+
+/* SEARCH CODES */
+
+function searchCodes() {
+
+    let input =
+        document.getElementById("search").value.toUpperCase();
+
+    let codes =
+        document.querySelectorAll(".code");
+
+    codes.forEach(function(item) {
+
+        let text =
+            item.innerText.toUpperCase();
+
+        if (text.includes(input)) {
+
+            item.style.display = "flex";
+
+        } else {
+
+            item.style.display = "none";
+
+        }
+
+    });
+
+}
+
 </script>
 
 </body>
-  </html>
+    </html>
